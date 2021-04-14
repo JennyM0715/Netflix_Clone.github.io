@@ -10,13 +10,14 @@ I used HTML, CSS, and JavaScript (just to change text from english to spanish)
     * GitHub
 I used a favicon converter website to get the favicon of the Netflix logo. 
 
-*[favicon of Netflix logo](https://favicon.io/favicon-converter/)
-*[Google Fonts](https://fonts.google.com/)
+[favicon of Netflix logo](https://favicon.io/favicon-converter/)
+
+[Google Fonts](https://fonts.google.com/)
 
 # Live Output
 
     * Click on link below to view the Netflix static page
-[Netflix Clone](https://fonts.google.com/)
+[Netflix Clone](https://jennym0715.github.io/Netflix_Clone.github.io/)
 
 
 
