@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-----favicon of Netflix logo-->
+    <!------used https://favicon.io/favicon-converter/-->
+    <link id="favicon" rel="icon" title="Netflix logo" href="/images/favicon.png" type="image/x-icon">
+    <title>Netflix Clone - Watch TV Shows Online, Watch Movies Online</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>`
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <main role="main">
+        <header role="banner">
+            <!----Banner Wrap -->
+            <div class="banner-wrap">
+                <!---------navigation menu: logo, lang switch, and login------------->
+                <div class="navbar">
+                    <!-----Netflix logo---->
+                    <div role="img" class="logo">
+                        <img src="/images/landing_page_netflix_logo.png" alt="landing page netflix" style="position: absolute; top: 10px; left: 0;">
+                    </div>
+                    <!--------language switcher dropdown menu------------->
+                    <div class="nav-menu" style="position:absolute; top: 10px; right:0;">
+                        <button class="btn btn-default dropdown-toggle" data-width="fit" role="button" type="button" data-toggle="dropdown" style="height: 4.2rem; width: 10rem; background-color: transparent; border: 1px solid white;">English
+                            <span class="caret"></span>
+                        </button>
+                        <!---options---->
+                        <ul class="dropdown-menu">
+                            <li onclick="toggleLanguage('English')" ><a href="#">English</a></li>
+                            <li onclick="toggleLanguage('Español')"><a href="#">Español</a></li>
+                        </ul>
+                    <!-----Netflix login button---->
+                    <a class="btn" href="#">Sign in</a>
+                    </div>
+                </div>
+                <!---------end of navigation menu: logo, lang switch, and login------------->
+
+                <!----------banner-container #1: Unlimited movies, TV shows, and more---------------->
+                <!----------get started by entering email address to create account---------------->
+                <div class="banner-container">
+                    <h1 id="banner_container_h1">Unlimited movies, TV <br> shows, and more.</h1>
+                    <h2 id="banner_container_h2">Watch anywhere. Cancel anytime.</h2>
+                    <div class="get-started">
+                        <h3 id="banner_container_h3">Ready to watch? Enter your email to create or restart your membership.
+                        </h3>
+                        <form>
+                            <input type="email" placeholder="Email address">
+                            <button id="banner_container_button" role="button">GET STARTED </button>
+                        </form>
+                    </div>
+                </div>
+                <!----------end of banner-container #1: Unlimited movies, TV shows, and more---------------->
+            </div>
+        </header>
+        <!-----------------end of Banner Wrap ------------------------------------------------------------>
+
+        <!-----info-container #1: Enjoy on your TV.--------------------------------------------->
+        <section role="reagion">
+            <div class="info-container">
+                <div class="info">
+                    <h1 id="info_container_1_h1">Enjoy on your TV.</h1>
+                    <h2 id="info_container_1_h2">Watch on Smart TVs, Playstation, Xbox,<br> Chromecast, Apple TV, Blu-ray players, and <br> more.</h2>
+                </div>
+                <div class="tv-container">
+                    <!------tv image on the container-->
+                    <!----got the src value from the atual Netflix landing page using the DevTools-->
+                    <div role="img" class="tv-image">
+                        <img alt="" class="our-story-card-img" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" data-uia="our-story-card-img">
+                    </div>
+                    <!----the actual video playing on the tv image container-->
+                    <!----got the src value from the atual Netflix landing page using the DevTools-->
+                    <div class="video">
+                        <video autoplay="" playsinline="" muted="" loop=""><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----end of info-container #1: Enjoy on your TV.------/------------->
+
+        <!-----info-container #2: Enjoy whereever you want on any device.------>
+        <section role="region">
+            <div class="info-container">
+                <div class="info">
+                    <h1 id="info_container_2_h1">Enjoy wherever you want.</h1>
+                    <h2 id="info_container_2_h2">Unlimited movies and series on your phone,<br> tablet, computer and TV at no extra cost.
+                    </h2>
+                </div>
+                <div class="tv-container">
+                    <!------tv image on the container-->
+                    <div role="img" class="tv-image">
+                        <!----got the src value from the atual Netflix landing page using the DevTools-->
+                        <img alt="ST_on_mac_PS" class="our-story-card-img" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" data-uia="our-story-card-img">
+                    </div>
+                    <!----the actual video playing on the tv image container-->
+                    <div class="video">
+                        <!----got the src value from the atual Netflix landing page using the DevTools-->
+                        <video autoplay playsinline muted loop style="width:30.25rem; margin-top:-25%; margin-left:16%"><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-----end of info-container #2: Enjoy whereever you want on any device.------------------------>
+
+        <!-----info-container #3: STRANGER THINGS DOWNLOAD ANYWHERE offline------------------------------->
+        <section role="region">
+            <div class="download_offline downloadAndWatch flipped info-container" data-uia-our-story="downloadAndWatch" data-uia="download_offline" style="background-color: black">
+                <div class="download_offline_container">
+                    <div class="card-text">
+                        <h1 class="card-title" data-uia="animation-card-title" id="Stranger_Things_card_title">Download your shows to watch offline.</h1>
+                        <h2 class="card-subtitle" data-uia="card-subtitle" id="Stranger_Things_card_subtitle">Save your favorites easily and always have something to watch.</h2>
+                    </div>
+                    <!-----------------------STRANGER THINSG ANIMATION AND IPHONE BACKGROUND IMAGE------------------>
+                    <div class="Stranger_Things_img_container">
+                        <!-----stragnger things iphone background image----------------->
+                        <div role="img" class="Stranger_Things_animation_container">
+                            <!----got the image src value from the atual Netflix landing page using the DevTools-->
+                            <img alt="Stranger Things iphone image" class="Stranger_Things_img" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" data-uia="Stranger_Things_img"/>
+
+                            <!------stranger things download offline bar------------>
+                            <div class="Stranger_Things_animation">
+                                <div role="img" class="Stranger_Things_animation_image">
+                                <!----got the image src value from the atual Netflix landing page using the DevTools-->
+                                    <img alt="Starnger Things offline download" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png"/>
+                                </div>
+                                <!------stranger things download texts------------>
+                                <div class="Stranger_Things_animation_download_text">
+                                    <div class="text-0" data-uia="">Stranger Things</div>
+                                    <div class="text-1" data-uia="">Downloading...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-pixel" style="position:absolute"></div>
+                </div>
+            </div>
+        </section>
+            <!-----end of info-container #3: STRANGER THINGS DOWNLOAD ANYWHERE offline------------------->
+    
+
+        <!--------------------FAQ SECTION------------------------------------------------------------->
+        <section role="region">
+            <div class="info-container faq-card" data-uia-our-story="faq" data-uia="FAQ_container" id="faq" style="background-color: black;">
+                <div class="container_text">
+                    <!-------------------------FAQ TITLE-------------------------------------------------->
+                    <h1 id="faq_title" class="FAQ_title" data-uia="faq-title" style="color: white; text-align: center;">Frequently Asked Questions</h1>
+                    <!-------------------------START of FAQ QUESTION LIST-------------------------------------------------->
+                    <ul class="faq-list" style="width: 150rem;">
+                        <!-------------------------FAQ #1-------------------------------------------------->
+                        <li class="faq-list-item" data-uia-our-story="faq-list-item" data-uia-faq="what_is_netflix">
+                            <details>
+                                <summary class="faq-question" id="faq_question_1">What is Netflix?</summary>
+                                <ul>
+                                <p  class="faq-answer" id="faq_question_1_answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                                    <br/><br/>You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+                                </p>
+                                </ul>
+                            </details>
+                            </li>
+                            <!-------------------------FAQ #2-------------------------------------------------->
+                            <li class="faq-list-item" data-uia-our-story="faq-list-item" data-uia-faq="cost">
+                                <details>
+                                    <summary class="faq-question" id="faq_question_2">How much does Netflix cost?</summary>
+                                    <ul>
+                                    <p class="faq-answer" id="faq_question_2_answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.
+                                    </p>
+                                    </ul>
+                                </details>
+                            </li>
+                            <!-------------------------FAQ #3-------------------------------------------------->
+                            <li class="faq-list-item" data-uia-our-story="faq-list-item" data-uia-faq="where_to_watch">
+                                <details>
+                                    <summary class="faq-question" id="faq_question_3">Where can I watch?</summary>
+                                    <ul>
+                                    <p class="faq-answer" id="faq_question_3_answer">Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                                        <br/>
+                                        <br/>You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+                                    </p>
+                                    </ul>
+                                </details>
+                            </li>
+                            <!-------------------------FAQ #4-------------------------------------------------->
+                            <li class="faq-list-item" data-uia-our-story="faq-list-item" data-uia-faq="cancel">
+                                <details>
+                                    <summary class="faq-question" id="faq_question_4">How do I cancel?</summary>
+                                    <ul>
+                                    <p class="faq-answer" id="faq_question_4_answer">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                                    </p>
+                                    </ul>
+                                </details>
+                            </li>
+                            <!-------------------------FAQ #5-------------------------------------------------->
+                            <li class="faq-list-item" data-uia-our-story="faq-list-item" data-uia-faq="what_to_watch_nft">
+                                <details>
+                                    <summary class="faq-question" id="faq_question_5">What can I watch on Netflix?</summary>
+                                    <ul>
+                                    <p class="faq-answer" id="faq_question_5_answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+                                    </p>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                        <!-------------------------end of FAQ QUESTION LIST-------------------------------------------------->
+                        <div class="faq_membership_wrap">
+                        <div class="faq_membership_container">
+                            <div class="get-started">
+                                <h3 id="faq_membership_h3">Ready to watch? Enter your email to create or restart your membership.</h3>
+                                <form>
+                                    <input type="email" placeholder="Email address">
+                                    <button id="faq_membership_button" role="button">GET STARTED </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-------end of container_text div class--------------->
+            </div>
+            <!--------------end of info-container faq-card div class---->
+        </section>
+    </main>
+    <!-----end of info-container #4: FAQ SECTION------------------------------------------------------------->
+    <!--------------------------END OF MAIN---------------------------------------------------------------->
+    <!----------footer with some content/info----------------->
+    <div class="footer" role="contentinfo">
+        <div class="contact-us">
+            <a href="#">Questions? Contact Us</a>
+        </div>
+        <div class="hyperlinks">
+            
+                <div class="col">
+                <ul>
+                    <li>FAQ</li>
+                    <li>Help Center</li>
+                    <li>Account</li>
+                    <li>Media Center</li>
+                </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                    <li>Investor Relations</li>
+                    <li>Jobs</li>
+                    <li>Ways to Watch</li>
+                    <li>Terms of Use</li>
+                </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                    <li>Privacy</li>
+                    <li>Cookie Preferences</li>
+                    <li>Corporate Information</li>
+                    <li>Contact Us</li>
+                </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                    <li>Speed Test</li>
+                    <li>Legal Notices</li>
+                    <li>Netflix Originals</li>
+                </ul>
+                </div>   
+          
+        </div>
+        <div class="footer-title">
+            <p>Netflix Clone----for educational purpose</p>
+        </div>
+    </div>
+    <!----------end of footer with some content/info----------------->
+</body>
+</html>
