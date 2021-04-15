@@ -27,7 +27,7 @@
 
 
 .banner-wrap {
-    background: url(/images/landing_page_background_image.jpg);
+    background: url(images/landing_page_background_image.jpg);
     height: 80vh;
     background-position: center;
     background-size: cover;
